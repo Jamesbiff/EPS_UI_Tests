@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using OpenQA.Selenium;
+
+namespace EPS_UI.Pages
+{
+    public class Sidebar
+    {
+        private IWebDriver _webDriver;
+
+        public Sidebar(IWebDriver webDriver)
+        {
+            _webDriver = webDriver;
+        }
+
+        public IWebElement testRunnerLink => _webDriver.FindElement(By.XPath("//span[contains(text(),'Test Runner')]"));
+
+
+        public void navigateToEpsUi()
+        {
+            _webDriver.Navigate().GoToUrl("https://do.roq-endpoint.co.uk/");
+        }
+    }
+}
