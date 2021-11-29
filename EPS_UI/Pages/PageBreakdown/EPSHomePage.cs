@@ -7,11 +7,11 @@ using IronOcr;
 
 namespace EPS_UI.Pages.PageBreakdown
 {
-    public class EPSHomePage : PageMaster
+    public class EPSHomePage
     {
         private readonly IWebDriver _webDriver;
 
-        public EPSHomePage(IWebDriver webDriver) : base(webDriver)
+        public EPSHomePage(IWebDriver webDriver)
         {
             _webDriver = webDriver;
         }

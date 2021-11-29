@@ -5,11 +5,11 @@ using OpenQA.Selenium;
 
 namespace EPS_UI.Pages.PageBreakdown
 {
-    public class Sidebar : PageMaster
+    public class Sidebar
     {
         private IWebDriver _webDriver;
 
-        public Sidebar(IWebDriver webDriver) : base(webDriver)
+        public Sidebar(IWebDriver webDriver)
         {
             _webDriver = webDriver;
         }

@@ -15,5 +15,3 @@ Scenario: Navigateion - Reporting
 	Given I am on the Endpoint homepage
 	When I select Reporting
 	Then the reporting options are expanded
-
-

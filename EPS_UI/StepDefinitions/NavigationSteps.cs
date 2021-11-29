@@ -18,13 +18,13 @@ namespace EPS_UI.stepdefinitions
         [Given(@"I am on the Endpoint homepage")]
         public void GivenIAmOnTheEndpointHomepage()
         {
-            _pageMaster._EPSHomePage.roqLogo.Click();
+            _pageMaster.EPSHomePage.epsHomeBanner.Click();
         }
         
         [When(@"I select Test Runner")]
         public void WhenISelectTestRunner()
         {
-            _pageMaster._sidebar.testRunnerLink.Click();
+            _pageMaster.Sidebar.testRunnerLink.Click();
         }
 
         [When(@"I select Manage")]
@@ -42,19 +42,19 @@ namespace EPS_UI.stepdefinitions
         [Then(@"I am taken to the test runner page")]
         public void ThenIAmTakenToTheTestRunnerPage()
         {
-            _pageMaster._testRunnerPage.testRunnerBanner.Click();
+            _pageMaster.TestRunnerPage.testRunnerBanner.Click();
         }
 
         [Then(@"the manage options are expanded")]
         public void ThenTheManageOptionsAreExpanded()
         {
-            _pageMaster._testRunnerPage.testRunnerBanner.Click();
+            _pageMaster.TestRunnerPage.testRunnerBanner.Click();
         }
 
         [Then(@"the reporting options are expanded")]
         public void ThenTheReportingOptionsAreExpanded()
         {
-            _pageMaster._testRunnerPage.testRunnerBanner.Click();
+            _pageMaster.TestRunnerPage.testRunnerBanner.Click();
         }
     }
 }

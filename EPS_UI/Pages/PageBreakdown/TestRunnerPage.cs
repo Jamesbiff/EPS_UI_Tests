@@ -5,11 +5,11 @@ using System.Text;
 
 namespace EPS_UI.Pages.PageBreakdown
 {
-    public class TestRunnerPage : PageMaster
+    public class TestRunnerPage
     {
         private readonly IWebDriver _webDriver;
 
-        public TestRunnerPage(IWebDriver webDriver) : base(webDriver)
+        public TestRunnerPage(IWebDriver webDriver)
         {
             _webDriver = webDriver;
         }
