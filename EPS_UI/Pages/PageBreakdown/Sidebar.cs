@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using OpenQA.Selenium;
 
-namespace EPS_UI.Pages
+namespace EPS_UI.Pages.PageBreakdown
 {
-    public class Sidebar
+    public class Sidebar : PageMaster
     {
         private IWebDriver _webDriver;
 
-        public Sidebar(IWebDriver webDriver)
+        public Sidebar(IWebDriver webDriver) : base(webDriver)
         {
             _webDriver = webDriver;
         }

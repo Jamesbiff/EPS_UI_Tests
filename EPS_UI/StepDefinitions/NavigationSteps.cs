@@ -9,28 +9,22 @@ namespace EPS_UI.stepdefinitions
     [Binding]
     public class NavigationSteps
     {
-        private readonly EPSHomePage _EPSHomePage;
-        private readonly Sidebar _sidebar;
-        private readonly TestRunnerPage _testRunnerPage;
-
+        private readonly PageMaster _pageMaster;
         public NavigationSteps(DriverHelper driverHelper)
         {
-            _EPSHomePage = new EPSHomePage(driverHelper.Current);
-            _sidebar = new Sidebar(driverHelper.Current);
-            _testRunnerPage = new TestRunnerPage(driverHelper.Current);
+            _pageMaster = new PageMaster(driverHelper.Current);
         }
 
         [Given(@"I am on the Endpoint homepage")]
         public void GivenIAmOnTheEndpointHomepage()
         {
-            
-            _EPSHomePage.epsHomeBanner.Click();
+            _pageMaster._EPSHomePage.roqLogo.Click();
         }
         
         [When(@"I select Test Runner")]
         public void WhenISelectTestRunner()
         {
-            _sidebar.testRunnerLink.Click();
+            _pageMaster._sidebar.testRunnerLink.Click();
         }
 
         [When(@"I select Manage")]
@@ -48,19 +42,19 @@ namespace EPS_UI.stepdefinitions
         [Then(@"I am taken to the test runner page")]
         public void ThenIAmTakenToTheTestRunnerPage()
         {
-            _testRunnerPage.testRunnerBanner.Click();
+            _pageMaster._testRunnerPage.testRunnerBanner.Click();
         }
 
         [Then(@"the manage options are expanded")]
         public void ThenTheManageOptionsAreExpanded()
         {
-            _testRunnerPage.testRunnerBanner.Click();
+            _pageMaster._testRunnerPage.testRunnerBanner.Click();
         }
 
         [Then(@"the reporting options are expanded")]
         public void ThenTheReportingOptionsAreExpanded()
         {
-            _testRunnerPage.testRunnerBanner.Click();
+            _pageMaster._testRunnerPage.testRunnerBanner.Click();
         }
     }
 }

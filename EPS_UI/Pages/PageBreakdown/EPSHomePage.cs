@@ -5,13 +5,13 @@ using System.IO;
 using System.Text;
 using IronOcr;
 
-namespace EPS_UI.Pages
+namespace EPS_UI.Pages.PageBreakdown
 {
-    public class EPSHomePage
+    public class EPSHomePage : PageMaster
     {
         private readonly IWebDriver _webDriver;
 
-        public EPSHomePage(IWebDriver webDriver)
+        public EPSHomePage(IWebDriver webDriver) : base(webDriver)
         {
             _webDriver = webDriver;
         }

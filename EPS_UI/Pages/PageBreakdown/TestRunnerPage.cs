@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EPS_UI.Pages
+namespace EPS_UI.Pages.PageBreakdown
 {
-    public class TestRunnerPage
+    public class TestRunnerPage : PageMaster
     {
         private readonly IWebDriver _webDriver;
 
-        public TestRunnerPage(IWebDriver webDriver)
+        public TestRunnerPage(IWebDriver webDriver) : base(webDriver)
         {
             _webDriver = webDriver;
         }
